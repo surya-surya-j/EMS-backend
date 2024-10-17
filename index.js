@@ -12,7 +12,7 @@ import dashboardRouter from "./routes/dashboard.js";
 const app = express();
 app.use(
   cors({
-    origin: "https://ems-frontend-1.vercel.app/",
+    origin: "https://ems-frontend-1.vercel.app",
     credentials: true,
   })
 );
