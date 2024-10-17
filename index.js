@@ -10,7 +10,12 @@ import settingRouter from "./routes/setting.js";
 import dashboardRouter from "./routes/dashboard.js";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://ems-frontend-1.vercel.app/",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.static("public/uploads"));
 app.use("/api/auth", authRouter);
